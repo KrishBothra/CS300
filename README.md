@@ -6,19 +6,15 @@ midpoint=i+(k−i)/2
 
 Sorting Algorithms
 
-| Algorithm          | Average-Case Time    | Notes                                                                                |
-| ------------------ | -------------------- | ------------------------------------------------------------------------------------ |
-| **Insertion Sort** | O(n²)                | Fast only when nearly sorted                                                         |
-| **Selection Sort** | O(n²)                | Always makes the same number of comparisons                                          |
-| **Bubble Sort**    | O(n²)                | Even worse because of many swaps                                                     |
-| **Merge Sort**     | O(n log n)           | Divides and merges efficiently                                                       |
-| **Quick Sort**     | O(n log n)           | Fastest in practice; bad O(n²) worst-case if pivot chosen poorly                     |
-| **Heap Sort**      | O(n log n)           | Uses a binary heap; good worst-case but slower constants than quicksort              |
-| **Counting Sort**  | O(n + k)             | Non-comparison sort; only works with integers in a fixed range                       |
-| **Radix Sort**     | O(nk)                | Sorts digits/characters; good for fixed-length numbers or str    ings                    |
-| **Bucket Sort**    | O(n + k)             | Distributes elements into buckets; efficient for uniform data                        |
-| **Shell Sort**     | O(n^(3/2)) (approx.) | Generalized insertion sort using gaps; faster than simple O(n²) sorts                |
-| **Tim Sort**       | O(n log n)           | Hybrid of merge + insertion (used in Java’s `Arrays.sort()` and Python’s `sorted()`) |
+| **Algorithm**      | **Best-Case** | **Average-Case** | **Worst-Case** | **Stable?**                        | **Adaptive?** | **Notes**                                                                |
+| ------------------ | ------------- | ---------------- | -------------- | ---------------------------------- | ------------- | ------------------------------------------------------------------------ |
+| **Insertion Sort** | O(n)          | O(n²)            | O(n²)          | ✅ Yes                              | ✅ Yes         | Fast only when nearly sorted; simple and in-place.                       |
+| **Selection Sort** | O(n²)         | O(n²)            | O(n²)          | ❌ No                               | ❌ No          | Always makes the same number of comparisons; not adaptive.               |
+| **Bubble Sort**    | O(n)          | O(n²)            | O(n²)          | ✅ Yes                              | ✅ Yes         | Detects sorted lists early; simple but inefficient.                      |
+| **Merge Sort**     | O(n log n)    | O(n log n)       | O(n log n)     | ✅ Yes                              | ❌ No          | Divides and merges efficiently; requires extra memory.                   |
+| **Quick Sort**     | O(n log n)    | O(n log n)       | O(n²)          | ❌ No                               | ❌ No          | Fastest in practice; bad worst case if pivot chosen poorly.              |
+| **Heap Sort**      | O(n log n)    | O(n log n)       | O(n log n)     | ❌ No                               | ❌ No          | Uses a binary heap; good worst case but slower constants than quicksort. |
+| **Shell Sort**     | O(n log n)*   | O(n^(3/2))       | O(n²)          | ❌ No                               | ✅ Yes         | Generalized insertion sort with gap sequence; adaptive to partial order. |
 
 
 🔹 Adaptive Sorting Algorithms:
